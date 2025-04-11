@@ -8,8 +8,8 @@
     background-color: green;
     color: white;
     border: none;
-    margin-left: 350px;
-    margin-top: 500px;
+    margin-left: 345px;
+    margin-top: 550px;
     height: 50px;
     width: 50px;
 }
@@ -27,7 +27,10 @@
     padding: 5px 15px;
     font-size: 16px;
     font-weight: bold;
-    margin-left: 100px;
+    justify-self: end;
+    position: absolute; /* Postavljamo dugme apsolutno u odnosu na roditelja */
+    right: 15px; 
+    padding: 8px;
 }
 .notes {
     text-align: center;
