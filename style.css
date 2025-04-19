@@ -80,3 +80,20 @@ body {
         margin-left: 7px;
     }
 }
+@media (max-width: 480px) {
+    #content {
+        flex-direction: row; /* Keep it in row for smaller screens */
+        justify-content: flex-start; /* Align to the left */
+        gap: 10px; /* Smaller gap for tight layout */
+    }
+
+    .frame {
+        width: calc(50% - 10px); /* Two items per row */
+        height: auto;
+    }
+
+    #button {
+        height: 40px;
+        width: 40px;
+    }
+}
