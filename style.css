@@ -54,17 +54,16 @@ body {
     color: white;
 }
 .edit-button {
-    background-color: rgb(0, 170, 37);
+    background-color: rgb(49, 190, 37);
     color: white;
     border: none;
     font-weight: bold;
     padding: 5px 15px;
-    font-size: 14px;
     padding: 8px;
     font-weight: bold;
     position: absolute;
     bottom: 7px;
-    right: 82px;
+    right: 42px;
 
 }
 .neww {
@@ -72,19 +71,53 @@ body {
 }
 .bold-button {
     position: absolute;
-    bottom: 11px;
-    right: 140px;
+    bottom: 6px;
+    right: 75px;
+    font-size: 26px;
     border: none;
     background-color: rgb(231, 231, 231);
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+}  
 
 .bold {
     font-weight: bold;
 }
-
+.italic {
+    font-style: italic;
+}
+.italic-button {
+    position: absolute;
+    bottom: 8px;
+    right: 100px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+}
+.justify {
+    text-align: justify;
+}
+.justify-button {
+    position: absolute;
+    bottom: 10px;
+    right: 128px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    font-size: 20px;
+}
+.center-button {
+    position: absolute;
+    bottom: 10px;
+    right: 155px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    font-size: 20px;
+}
+.center {
+    text-align: center;
+}
 @media (max-width: 768px) {
     .frame {
         border: 1px solid black;
@@ -100,5 +133,31 @@ body {
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-left: 7px;
+    }
+    .remove-button {
+        font-size: 12px;
+        bottom: 7px;
+        right: 5px;
+    }
+    .edit-button {
+        font-size: 12px;
+        bottom: 7px;
+        right: 38px;
+    
+    }
+    .bold-button {
+        bottom: 6px;
+        right: 70px;
+        font-size: 26px;
+    }
+    .italic-button {
+        bottom: 10px;
+        right: 95px;
+    }
+    .justify-button {
+        right: 120px;
+    }
+    .center-button {
+        right: 147px;
     }
 }

@@ -28,10 +28,36 @@ boldButton.addEventListener('click', function() {
     text.classList.add('bold');
 });
 
+// italic
+const italicButton = document.createElement('button');
+italicButton.innerHTML = '<i class="fa-solid fa-italic"></i>';
+note.appendChild(italicButton);
+italicButton.classList.add('italic-button');
+italicButton.addEventListener('click', function() {
+    text.classList.add('italic');
+});
+
+/// justify 
+const justifyButton = document.createElement('button');
+justifyButton.innerHTML = '<i class="fa-solid fa-align-justify"></i> ';
+note.appendChild(justifyButton);
+justifyButton.classList.add('justify-button');
+justifyButton.addEventListener('click', function() {
+    text.classList.add('justify');
+});
+
+/// center
+const centerButton = document.createElement('button');
+centerButton.innerHTML = '<i class="fa-solid fa-align-center"></i>';
+note.appendChild(centerButton);
+centerButton.classList.add('center-button');
+centerButton.addEventListener('click', function() {
+    text.classList.add('center');
+});
 
 /// remove button
 const removeButton = document.createElement('button');
-removeButton.textContent = 'Remove';
+removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 note.appendChild(removeButton);
 removeButton.classList.add("remove-button")
 removeButton.addEventListener('click', function() {
@@ -39,7 +65,7 @@ removeButton.addEventListener('click', function() {
 });
 /// edit button
 const editButton = document.createElement('button');
-editButton.textContent = 'Edit';
+editButton.innerHTML = '<i class="fa-solid fa-pen"></i>';
 note.appendChild(editButton);
 editButton.classList.add('edit-button');
 editButton.addEventListener('click', function() {
@@ -49,6 +75,7 @@ editButton.addEventListener('click', function() {
     const newText = prompt('Enter new note');
     text.textContent = newText;
 
+    note.appendChild(boldButton);
     note.appendChild(removeButton);
     note.appendChild(editButton);
 
