@@ -76,6 +76,9 @@ editButton.addEventListener('click', function() {
     text.textContent = newText;
 
     note.appendChild(boldButton);
+    note.appendChild(italicButton);
+    note.appendChild(justifyButton);
+    note.appendChild(centerButton);
     note.appendChild(removeButton);
     note.appendChild(editButton);
 
