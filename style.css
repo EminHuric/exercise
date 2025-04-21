@@ -118,6 +118,11 @@ body {
 .center {
     text-align: center;
 }
+.txt {
+  max-height: 160px;    
+  overflow-y: auto;         
+  padding-right: 5px; 
+}
 @media (max-width: 768px) {
     .frame {
         border: 1px solid black;
