@@ -34,14 +34,14 @@ body {
 .menu-bar li {
     margin-top: 30px;
     margin-left: 9px;
-    font-size: 20px;
+    font-size: 24px;
     height: 30px;
 }
 .open {
     text-decoration: none;
     color: black;
-    margin-top: 35px;
-    font-size: 24px;
+    margin-top: 15px;
+    font-size: 20px;
     margin-left: 5px;
     height: 30px;
     padding: 10px;
