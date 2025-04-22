@@ -40,15 +40,24 @@ body {
 .open {
     text-decoration: none;
     color: black;
+    margin-top: 35px;
+    font-size: 24px;
+    margin-left: 5px;
+    height: 30px;
+    padding: 10px;
 }
-.menu-bar li:hover {
-    background-color: antiquewhite;
+.open:hover {
+    background-color: white;
 }
 .bars {
     color: white;
     font-size: 24px;
     margin-top: -3.3%;
     margin-left: 2%;
+}
+.colmun {
+    flex-direction: column;
+    display: flex;
 }
 #button {
     background-color: green;
