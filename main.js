@@ -1,5 +1,15 @@
 const button = document.getElementById('button');
 const content = document.getElementById('content');
+const bars = document.getElementById('bars');
+const menu = document.getElementById('menuBar');
+const close = document.getElementById('close');
+
+bars.addEventListener('click', function () {
+    menu.style.display = 'block'; // Ovdje prikazujemo meni
+  });
+close.addEventListener('click', function () {
+    menu.style.display = 'none'; 
+  });
 
 function add() {
 /// card
