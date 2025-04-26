@@ -82,7 +82,10 @@ notes.push({
     const editButton = document.createElement('button');
     editButton.innerHTML = '<i class="fas fa-pen"></i>';
     note.appendChild(editButton);
-    editButton.classList.add('edit-button')
+    editButton.classList.add('edit-button");
+    
+    editButton.dataset.id = new_id; // <------------------------------------------------------
+
     editButton.addEventListener('clik', function() {
 
     });
