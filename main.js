@@ -86,8 +86,12 @@ notes.push({
     
     editButton.dataset.id = new_id; // <------------------------------------------------------
 
-    editButton.addEventListener('clik', function() {
-
+    editButton.addEventListener("click", function () {
+let thisNote = notes.find((n) => n.id == editButton.dataset.id);
+      if (note) {
+        console.log(thisNote.title);
+        console.log(thisNote.note);
+      }
     });
   
   const p = note.querySelector('p');
