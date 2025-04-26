@@ -57,6 +57,12 @@ function add() {
     const titleValue = enterTitle.value;
     const noteValue = enterNote.value;
 
+notes.push({
+      id: ++new_id,
+      title: titleValue,
+      note: noteValue,
+    });
+
     const note = document.createElement('div');
     note.classList.add('note');
     note.innerHTML = `<h3>${titleValue}</h3><p>${noteValue}</p>`;
