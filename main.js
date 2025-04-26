@@ -11,6 +11,10 @@ close.addEventListener('click', function () {
     menu.style.display = 'none'; 
 });
 
+let notes = [];
+
+let new_id = 0;
+
 function add() {
   /// window
   const window = document.createElement('div');
