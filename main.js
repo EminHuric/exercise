@@ -6,93 +6,111 @@ const close = document.getElementById('close');
 
 bars.addEventListener('click', function () {
     menu.style.display = 'block'; // Ovdje prikazujemo meni
-  });
+});
 close.addEventListener('click', function () {
     menu.style.display = 'none'; 
-  });
+});
 
 function add() {
-/// card
-const note = document.createElement('div');
-note.classList.add('frame');
-content.appendChild(note);
+  /// window
+  const window = document.createElement('div');
+  window.classList.add('window');
+  document.body.appendChild(window);
 
-/// title
-const title = document.createElement('h1');
-title.textContent = prompt('enter a title');
-note.appendChild(title);
-title.classList.add('title')
+  const enter = document.createElement('div');
+  enter.classList.add('enter');
+  window.appendChild(enter);
 
-/// text
-const text = document.createElement('p');
-text.textContent = prompt('Enter a note');
-note.appendChild(text);
-text.classList.add('txt');
+  /// add input
+  const enterTitle = document.createElement('input');
+  enterTitle.type = 'text';
+  enterTitle.placeholder = 'Enter a title';
+  enter.appendChild(enterTitle)
+  enterTitle.classList.add('enterTitle')
 
-/// bold
-const boldButton = document.createElement('button');
-boldButton.textContent = 'B';
-note.appendChild(boldButton);
-boldButton.classList.add('bold-button');
-boldButton.addEventListener('click', function() {
-    text.classList.add('bold');
-});
+  const enterNote = document.createElement('input');
+  enterNote.type = 'text';
+  enterNote.placeholder = 'Enter a note';
+  enter.appendChild(enterNote);
+  enterNote.classList.add('enterNote');
 
-// italic
-const italicButton = document.createElement('button');
-italicButton.innerHTML = '<i class="fa-solid fa-italic"></i>';
-note.appendChild(italicButton);
-italicButton.classList.add('italic-button');
-italicButton.addEventListener('click', function() {
-    text.classList.add('italic');
-});
+  /// add button
+  const addButton = document.createElement('button');
+  addButton.textContent = 'Add';
+  addButton.classList.add('addButton');
+  enter.appendChild(addButton);
 
-/// justify 
-const justifyButton = document.createElement('button');
-justifyButton.innerHTML = '<i class="fa-solid fa-align-justify"></i> ';
-note.appendChild(justifyButton);
-justifyButton.classList.add('justify-button');
-justifyButton.addEventListener('click', function() {
-    text.classList.add('justify');
-});
+  /// close button
+  const closeButton = document.createElement('button');
+  closeButton.textContent = 'Close';
+  closeButton.classList.add('closeButton');
+  enter.appendChild(closeButton);
+  closeButton.addEventListener('click', function () {
+    document.body.removeChild(window);
+  });
 
-/// center
-const centerButton = document.createElement('button');
-centerButton.innerHTML = '<i class="fa-solid fa-align-center"></i>';
-note.appendChild(centerButton);
-centerButton.classList.add('center-button');
-centerButton.addEventListener('click', function() {
-    text.classList.add('center');
-});
+  addButton.addEventListener('click', function () {
+    const titleValue = enterTitle.value;
+    const noteValue = enterNote.value;
 
-/// remove button
-const removeButton = document.createElement('button');
-removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-note.appendChild(removeButton);
-removeButton.classList.add("remove-button")
-removeButton.addEventListener('click', function() {
-    note.remove();
-});
-/// edit button
-const editButton = document.createElement('button');
-editButton.innerHTML = '<i class="fa-solid fa-pen"></i>';
-note.appendChild(editButton);
-editButton.classList.add('edit-button');
-editButton.addEventListener('click', function() {
-    const newTitle = prompt('Enter new title');
-    title.textContent = newTitle;
+    const note = document.createElement('div');
+    note.classList.add('note');
+    note.innerHTML = `<h3>${titleValue}</h3><p>${noteValue}</p>`;
+    content.appendChild(note);
+    document.body.removeChild(window);
 
-    const newText = prompt('Enter new note');
-    text.textContent = newText;
-
-    note.appendChild(boldButton);
-    note.appendChild(italicButton);
-    note.appendChild(justifyButton);
-    note.appendChild(centerButton);
+    /// remove button
+    const removeButton = document.createElement('button');
+    removeButton.innerHTML = '<i class="fas fa-trash"></i>'; 
+    removeButton.classList.add('remove-button')
     note.appendChild(removeButton);
-    note.appendChild(editButton);
+    removeButton.addEventListener('click', function() {
+      note.remove();
+    });
 
+    // edit button
+    const editButton = document.createElement('button');
+    editButton.innerHTML = '<i class="fas fa-pen"></i>';
+    note.appendChild(editButton);
+    editButton.classList.add('edit-button')
+    editButton.addEventListener('clik', function() {
+
+    });
+  
+  const p = note.querySelector('p');
+///bold
+  const boldButton = document.createElement('button');
+  boldButton.innerHTML = '<i class="fa-sharp fa-solid fa-bold"></i>';
+  note.appendChild(boldButton);
+  boldButton.classList.add('b-button');
+
+boldButton.addEventListener('click', function() {
+  p.classList.toggle('bold-button');
+});
+
+///italic
+const italicButton = document.createElement('button');
+italicButton.innerHTML = '<i class="fa-sharp fa-solid fa-italic"></i>';
+note.appendChild(italicButton);
+italicButton.classList.add('i-button');
+
+italicButton.addEventListener('click', function() {
+    p.classList.toggle('italic-button');
+})
+
+/// justify
+
+const justifyButton = document.createElement('button');
+justifyButton.innerHTML = '<i class="fa-solid fa-align-justify"></i>';
+note.appendChild(justifyButton);
+justifyButton.classList.add('j-button');
+
+justifyButton.addEventListener('click', function() {
+    p.classList.toggle('justify-button');
+})
+  
 });
 
 }
+
 button.addEventListener('click', add);

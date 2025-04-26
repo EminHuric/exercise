@@ -1,19 +1,154 @@
 body {
     background-color: #e2e9e4;
 }
-#content {
-    justify-items: center;
+.window {
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+#content {
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.note {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px;
+    font-size: 24px;
+    position: relative;
+}
+.note h3 {
+    text-align: center;
+    margin-top: 0px;
+}
+.enter {
+    border: 1px solid rgb(255, 255, 255);
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+.remove-button {
+    position: absolute;
+    bottom: 8px; 
+    right: 2px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 24px;
+
+}
+.edit-button {
+    position: absolute;
+    bottom: 10px; 
+    right: 34px;
+    background: rgb(26, 200, 26);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    height: 25px;
+    width: 25px;
+}
+.bold-button {
+    font-weight: bold;
+}
+.italic-button {
+    font-style: italic;
+}
+.i-button {
+    position: absolute;
+    bottom: 9px; 
+    right: 86px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+}
+.b-button {
+    position: absolute;
+    bottom: 8px; 
+    right: 61px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+.justify-button {
+    text-align: justify;
+}
+.j-button {
+    position: absolute;
+    bottom: 8px; 
+    right: 113px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
 }
 .menu {
     border: 1px solid green;
     height: 120px;
     width: 100%;
     background-color: green;
+}
+.enterTitle {
+    height: 40px;
+    width: 500px;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    text-align: center;
+}
+.enterNote {
+    width: 500px;
+    margin-left: 100px;
+    height: 200px;
+    margin-top: 30px;
+    text-align: start;
+    font-size: 24px;
+    padding: 10px;
+    resize: vertical;
+}
+.addButton {
+    bottom: 138px;
+    height: 30px;
+    width: 80px;
+    font-size: 18px;
+    left: 700px;
+    position: fixed;
+    background-color: rgb(15, 176, 15);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.closeButton {
+    bottom: 138px;
+    height: 30px;
+    width: 80px;
+    font-size: 18px;
+    left: 800px;
+    position: fixed;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: bold;
 }
 .menu-bar {
     border: 1px solid green;
@@ -81,104 +216,30 @@ body {
 .title {
     margin-top: -10px;
 }
-.remove-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    font-size: 14px;
-    padding: 8px;
-    font-weight: bold;
-    position: absolute;
-    bottom: 7px;
-    right: 7px;
+.enter {
+    border: 1px solid black;
+    height: 400px;
+    width: 700px;
+    margin-top: 50px;
+    justify-self: center;
 }
+
 .notes {
     text-align: center;
     color: white;
     margin-top: 40px;
 }
-.edit-button {
-    background-color: rgb(49, 190, 37);
-    color: white;
-    border: none;
-    font-weight: bold;
-    padding: 5px 15px;
-    padding: 8px;
-    font-weight: bold;
-    position: absolute;
-    bottom: 7px;
-    right: 42px;
+.enter {
+    border: 1px solid black;
+    height: 400px;
+    width: 700px;
+    margin-top: 50px;
+}
 
-}
-.neww {
-    margin-top: 30px;
-}
-.bold-button {
-    position: absolute;
-    bottom: 6px;
-    right: 75px;
-    font-size: 26px;
-    border: none;
-    background-color: rgb(231, 231, 231);
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}  
 
-.bold {
-    font-weight: bold;
-}
-.italic {
-    font-style: italic;
-}
-.italic-button {
-    position: absolute;
-    bottom: 8px;
-    right: 100px;
-    border: none;
-    background-color: rgb(231, 231, 231);
-    font-style: italic;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 24px;
-}
-.justify {
-    text-align: justify;
-}
-.justify-button {
-    position: absolute;
-    bottom: 10px;
-    right: 128px;
-    border: none;
-    background-color: rgb(231, 231, 231);
-    font-size: 20px;
-}
-.center-button {
-    position: absolute;
-    bottom: 10px;
-    right: 155px;
-    border: none;
-    background-color: rgb(231, 231, 231);
-    font-size: 20px;
-}
-.center {
-    text-align: center;
-}
-.txt {
-  max-height: 160px;    
-  overflow-y: auto;         
-  padding-right: 5px; 
-}
-.menu-line {
-    display: flex;
-    margin-top: -3%;
-    margin-left: 10%;
-}
-.menu-line ul {
-    text-align: center;
-    font-size: 24px;
-    margin-left: 5%;
 
-}
+
+
 @media (max-width: 768px) {
     .frame {
         border: 1px solid black;
@@ -195,36 +256,40 @@ body {
         justify-content: flex-start;
         margin-left: 7px;
     }
-    .remove-button {
-        font-size: 12px;
-        bottom: 7px;
-        right: 5px;
-    }
-    .edit-button {
-        font-size: 12px;
-        bottom: 7px;
-        right: 38px;
-    
-    }
-    .bold-button {
-        bottom: 6px;
-        right: 70px;
-        font-size: 26px;
-    }
-    .italic-button {
-        bottom: 10px;
-        right: 95px;
-    }
-    .justify-button {
-        right: 120px;
-    }
-    .center-button {
-        right: 147px;
-    }
     .bars {
         color: white;
         font-size: 24px;
         margin-top: -12%;
         margin-left: 3%;
     }
+    .note {
+        width: 95%; 
+        margin: 10px auto;
+        font-size: 5vw;
+    }
+
+    .enter {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .enterNote {
+        width: 77%;
+        margin-left: 10%;
+    }
+    .enterTitle {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .closeButton {
+        width: 10%;
+        margin-left: -70%;
+        bottom: 20%;
+    }
+    .addButton {
+        width: 10%;
+        margin-left: -80%;
+        bottom: 20%;
+    }
+
+
 }
