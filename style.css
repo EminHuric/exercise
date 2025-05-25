@@ -447,22 +447,33 @@
 .sortt {
     font-size: 20px;
 }
- @media (max-width: 480px) {
-      .note {
-        width: 48%;
-      }
-    }
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    /* Tablet - 3 u redu */
-    @media (min-width: 481px) and (max-width: 768px) {
-      .note {
-        width: 32%;
-      }
-    }
+@media (max-width: 1024px) {
+  .notes-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    /* Desktop - 4 u redu */
-    @media (min-width: 769px) {
-      .note {
-        width: 23%;
-      }
-    }
+/* Mobilni: 2 kolone */
+@media (max-width: 600px) {
+  .addModal {
+    width: 80%;        
+    padding: 15px;
+  }
+  .modal {
+    width: 80%;        
+    padding: 15px;
+    font-size: 13px;
+    margin-left: 28px;
+  }
+  .signModal {
+    width: 90%;        
+    padding: 15px;
+    margin: 9px;
+  }
+}
