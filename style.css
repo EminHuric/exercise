@@ -1,287 +1,468 @@
-body {
-    background-color: #e2e9e4;
+.container {
+    display: flex;
 }
-.window {
-    background-color: rgb(0, 0, 0, 0.5);
+
+.intro {
+    border: 1px solid rgb(21, 198, 44);
+    height: 120px;
+    background-color: rgb(4, 186, 26);
+}
+
+.title {
+    text-align: center;
+    margin-top: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.menu {
+    background-color: rgb(4, 186, 26);
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    margin-top: -75px;
+    color: white;
+    margin-left: 10px;
+    z-index: 9000;
+    position: static;
+
+}
+
+.options {
+    background-color: rgb(4, 186, 26);
     height: 100vh;
-    width: 100%;
+    width: 30%;
+    top: 10px;
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+.closebtn {
+    background-color: rgb(4, 186, 26);
+    font-size: 35px;
+    padding-bottom: 50px;
+    width: 50px;
+    margin-left: 35px;
+    color: white;
+    padding-top: 50px;
+}
+
+.user {
+    right: 40px;
+    top: 60px;
+    font-size: 30px;
+    position: absolute;
+    color: white;
+}
+
+.background {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
+}
+
+.modal {
+    border: 1px solid rgb(255, 255, 255);
+    height: 80%;
+    width: 50%;
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 6%;
+}
+
+.restmodal {
+    border: 1px solid rgb(255, 255, 255);
+    height: 80%;
+    width: 50%;
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 6%;
+    border-radius: 12px;
+}
+
+.dont {
+    margin-left: 33%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkss {
+    margin-top: 2%;
+    margin-left: 1%;
+    color: blue;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signModal {
+    border: 1px solid rgb(255, 255, 255);
+    height: 80%;
+    width: 50%;
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 6%;
+    border-radius: 12px;
+}
+
+.signTitle {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
 
 }
-#content {
-    justify-content: center;
-    justify-self: center;
+
+.input1 {
+    height: 50px;
+    font-size: 20px;
+    width: 25%;
+    margin-left: 20%;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.input2 {
+    height: 50px;
+    font-size: 20px;
+    width: 25%;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.signEmail {
+    height: 50px;
+    font-size: 20px;
+    width: 58%;
+    margin-left: 20%;
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+.signButton {
+    height: 50px;
+    font-size: 20px;
+    width: 59.5%;
+    margin-left: 20%;
+    margin-top: 15px;
+    padding-left: 5px;
+    background-color: rgb(21, 198, 44);
+    border: none;
+}
+
+.view {
+    margin-top: 4%;
+    margin-left: -30px;
+    font-size: 18px;
+}
+
+.errorInput {
+    border-color: red;
+}
+
+.have {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 32%;
+    font-size: 18px;
+
+}
+
+.lg {
+    text-decoration: underline;
+    color: blue;
+    font-size: 18px;
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.options ul {
+    font-size: 24px;
+}
+
+.options ul:hover {
+    background-color: white;
+    height: 35px;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.add {
+    margin-top: 200px;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: rgb(21, 198, 44);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    right: 20px;
+    bottom: 20px;
+}
+
+.note1 {
+    border: 1px solid black;
+    height: 320px;
+    width: 330px;
+    margin-left: 10px;
+    margin-top: 60px;
+    padding: 10px;
+    position: relative;
+    overflow: auto;
+}
+
+#notes {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
-.note {
-    border: 1px solid black;
-    height: 300px;
-    width: 300px;
-    margin-top: 50px;
-    margin-left: 50px;
-    padding: 10px;
-    font-size: 24px;
-    position: relative;
-}
-.note h3 {
-    text-align: center;
-    margin-top: 0px;
-}
-.enter {
-    border: 1px solid rgb(255, 255, 255);
-    height: 300px;
-    width: 500px;
-    background-color: white;
-    box-shadow: 0 0 15px rgb(255, 255, 255);
-}
-.remove-button {
-    position: absolute;
-    bottom: 8px; 
-    right: 2px;
-    background: none;
-    border: none;
-    color: red;
-    font-size: 24px;
 
-}
-.edit-button {
-    position: absolute;
-    bottom: 10px; 
-    right: 34px;
-    background: rgb(26, 200, 26);
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    height: 25px;
-    width: 25px;
-}
-.bold-button {
-    font-weight: bold;
-}
-.italic-button {
-    font-style: italic;
-}
-.i-button {
-    position: absolute;
-    bottom: 9px; 
-    right: 86px;
-    background: none;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 21px;
-}
-.b-button {
-    position: absolute;
-    bottom: 8px; 
-    right: 61px;
-    background: none;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-}
-.justify-button {
-    text-align: justify;
-}
-.j-button {
-    position: absolute;
-    bottom: 8px; 
-    right: 113px;
-    background: none;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-}
-.menu {
-    border: 1px solid green;
-    height: 120px;
+.backModal {
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    background-color: green;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-.enterTitle {
-    height: 40px;
-    width: 500px;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-left: 100px;
+
+.addModal {
+    border: 1px solid white;
+    height: 500px;
+    width: 850px;
+    background-color: white;
+    justify-self: center;
+    margin-top: 100px;
+}
+
+.titleNote {
+    font-size: 30px;
+    padding: 5px;
     border-top: none;
     border-left: none;
     border-right: none;
-    outline: none;
     text-align: center;
+    margin-top: 40px;
+    margin-left: 15%;
+    width: 70%;
+    outline: none;
 }
-.enterNote {
-    width: 500px;
-    margin-left: 100px;
-    height: 200px;
-    margin-top: 30px;
+
+.notee {
+    font-size: 30px;
+    padding: 10px;
     text-align: start;
-    font-size: 24px;
-    padding: 10px;
-    resize: vertical;
-}
-.addButton {
-    bottom: 138px;
-    height: 30px;
-    width: 80px;
-    font-size: 18px;
-    left: 700px;
-    position: fixed;
-    background-color: rgb(15, 176, 15);
-    border: none;
-    color: white;
-    font-weight: bold;
-}
-.closeButton {
-    bottom: 138px;
-    height: 30px;
-    width: 80px;
-    font-size: 18px;
-    left: 800px;
-    position: fixed;
-    background-color: red;
-    border: none;
-    color: white;
-    font-weight: bold;
-}
-.menu-bar {
-    border: 1px solid green;
-    background-color: green;
-    height: 100vh;
-    width: 35%;
-    margin-left: -1px;
-    position: fixed;
-    z-index: 9999;
-    display: none;
-}
-.close-btn {
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-    margin-left: 5.5%;
-}
-.menu-bar li {
     margin-top: 30px;
-    margin-left: 9px;
-    font-size: 24px;
-    height: 30px;
+    margin-left: 15%;
+    width: 70%;
+    height: 55%;
+    outline: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+
 }
-.open {
-    text-decoration: none;
-    color: black;
-    margin-top: 15px;
-    font-size: 20px;
-    margin-left: 5px;
-    height: 30px;
-    padding: 10px;
-}
-.open:hover {
-    background-color: white;
-}
-.bars {
+
+.addButton {
+    background-color: rgb(8, 172, 2);
     color: white;
-    font-size: 24px;
-    margin-top: -3.3%;
-    margin-left: 2%;
-}
-.colmun {
-    flex-direction: column;
-    display: flex;
-}
-#button {
-    background-color: green;
-    color: white;
+    padding: 5px 15px;
     border: none;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    height: 50px;   
-    width: 50px;
-}
-.frame {
-    border: 1px solid black;
-    height: 280px;
-    width: 280px;
-    font-size: 24px;
-    position: relative;
-    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40%;
     margin-top: 20px;
 }
-.title {
-    margin-top: -10px;
-}
-.enter {
-    border: 1px solid black;
-    height: 400px;
-    width: 700px;
-    margin-top: 50px;
-    justify-self: center;
-}
 
-.notes {
-    text-align: center;
+.closeButton {
+    background-color: rgb(244, 8, 4);
     color: white;
-    margin-top: 40px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 20px;
 }
-.enter {
-    border: 1px solid black;
-    height: 400px;
-    width: 700px;
-    margin-top: 50px;
+
+.noteTitle {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
 }
 
+.divv {
+    border: 1px solid rgb(255, 255, 255);
+    height: 40px;
+    width: 95%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    z-index: 0;
+}
 
-
-
-
-@media (max-width: 768px) {
-    #content {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-left: 7px;
-    }
-    .bars {
-        color: white;
-        font-size: 24px;
-        margin-top: -12%;
-        margin-left: 3%;
-    }
-    .note {
-        width: 95%; 
-        margin: 10px auto;
-        font-size: 5vw;
-    }
-
-    .enter {
-        width: 85%;
-        margin: 0 auto;
-    }
-    .enterNote {
-        width: 77%;
-        margin-left: 10%;
-    }
-    .enterTitle {
-        width: 80%;
-        margin-left: 10%;
-    }
-    .closeButton {
-        width: 10%;
-        margin-left: -70%;
-        bottom: 20%;
-    }
-    .addButton {
-        width: 10%;
-        margin-left: -80%;
-        bottom: 20%;
-    }
-
+.note {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 5px;
+    margin-right: 5px;
+    padding-top: 40px;
 
 }
+
+.removeNote {
+    margin-top: 10px;
+    margin-left: 305px;
+    border: none;
+    background: none;
+    font-size: 21px;
+    color: red;
+    position: absolute;
+    cursor: pointer;
+}
+
+.saveButton {
+    margin-left: 280px;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+}
+
+.editButton {
+    margin-left: 250px;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: rgb(0, 203, 0);
+}
+
+.darkBack {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.editTitle {
+    font-size: 30px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    top: 150px;
+    position: absolute;
+    margin-left: 7.7%;
+    width: 40%;
+    outline: none;
+}
+
+.editNote {
+    font-size: 30px;
+    padding: 5px;
+    top: 33%;
+    position: absolute;
+    margin-left: 7.7%;
+    width: 40%;
+    height: 40%;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edittButton {
+    background-color: rgb(8, 172, 2);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20%;
+    position: absolute;
+    top: 78%;
+}
+
+.closeButton2 {
+    background-color: rgb(244, 8, 4);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 30%;
+    position: absolute;
+    top: 78%;
+}
+.centerNote {
+    text-align: center;
+    background-color: none;
+    font-size: 20px;
+    background: none;
+    margin-top: 10px;
+    right: 85px;
+    border: none;
+    position: absolute;
+
+}
+.active {
+    background-color: #ddd;
+}
+.sort {
+    height: 40px;
+    position: absolute;
+    z-index: 10000;
+    top: 140px;
+    right: 20px;
+    font-size: 35px;
+    background-color: white;
+    border: none;
+    z-index: 1;
+}
+.sortModal {
+    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: rgb(4, 186, 26);
+    top: 139px;
+    right: 8px;
+    border-radius: 5px;
+    z-index: 100;
+}
+.sortt {
+    font-size: 20px;
+}
+ @media (max-width: 480px) {
+      .note {
+        width: 48%;
+      }
+    }
+
+    /* Tablet - 3 u redu */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .note {
+        width: 32%;
+      }
+    }
+
+    /* Desktop - 4 u redu */
+    @media (min-width: 769px) {
+      .note {
+        width: 23%;
+      }
+    }
